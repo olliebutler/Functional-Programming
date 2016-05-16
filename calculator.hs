@@ -32,7 +32,7 @@ mkYesod "App" [parseRoutes|
 /subtract/#Integer/#Integer SubtractR GET
 /multiply/#Integer/#Integer MultiplyR GET
 /devide/#Integer/#Integer DevideR GET
-/createuser/#String/#String CreateuserR PUT
+--/createuser/#String/#String CreateuserR PUT
 |]
 
 
@@ -52,13 +52,12 @@ getDevideR a b  = 	defaultLayout [whamlet|<h1>#{a} devided by #{b} = #{devideInt
 devideInts :: Integer -> Integer -> Float
 devideInts a b = (fromIntegral a) / (fromIntegral b)
 
-putCreateuserR ::  String -> String  -> Handler Html -- -> Entity Users
-putCreateuserR user pass =  defaultLayout [whamlet|<h1> Account created with username - #{user} and password -  #{pass}|] >>
-							insert $ Users (user) (pass){-/hi-} 
+--putCreateuserR ::  String -> String  -> Handler Html -- -> Entity Users
+--putCreateuserR user pass =  defaultLayout [whamlet|<h1> Account created with username - #{user} and password -  #{pass}|] >>
+--							insert $ Users (user) (pass){-/hi-} 
 							  
 
---insertUser :: String -> String
---insertUser user pass = insert $ Users (user) (pass){-/hi-}
+
 							
 
 main :: IO ()
