@@ -52,9 +52,6 @@ getDevideR a b  = 	defaultLayout [whamlet|<h1>#{a} devided by #{b} = #{devideInt
 devideInts :: Integer -> Integer -> Float
 devideInts a b = (fromIntegral a) / (fromIntegral b)
 
---putCreateuserR ::  String -> String  -> Handler Html -- -> Entity Users
---putCreateuserR user pass =  defaultLayout [whamlet|<h1> Account created with username - #{user} and password -  #{pass}|] >>
---							insert $ Users (user) (pass){-/hi-} 
 							  
 
 
